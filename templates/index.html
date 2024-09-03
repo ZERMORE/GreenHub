@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>车流量模型</title>
+</head>
+<body>
+    <h1>输入车流量信息</h1>
+    <form id="trafficForm">
+        <label for="lane1">车道1流量:</label>
+        <input type="number" id="lane1" name="lane1" step="10"><br><br>
+        <label for="lane2">车道2流量:</label>
+        <input type="number" id="lane2" name="lane2" step="10"><br><br>
+        <label for="lane3">车道3流量:</label>
+        <input type="number" id="lane3" name="lane3" step="10"><br><br>
+        <button type="button" onclick="runModel()">运行模型</button>
+    </form>
+
+    <h2>模型输出结果</h2>
+    <pre id="modelOutput"></pre>
+
+    <script>
+        function runModel() {
+            const lane1 = document.getElementById('lane1').value;
+            const lane2 = document.getElementById('lane2').value;
+            const lane3 = document.getElementById('lane3').value;
+
+            fetch('/run-model', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ lane1, lane2, lane3 }),
+            })
+            .then(response => {
+                const reader = response.body.getReader();
+                const decoder = new TextDecoder();
+                let outputElement = document.getElementById('modelOutput');
+
+                function readStream() {
+                    reader.read().then(({ done, value }) => {
+                        if (done) {
+                            return;
+                        }
+                        outputElement.textContent += decoder.decode(value);
+                        readStream();
+                    });
+                }
+
+                readStream();
+            })
+            .catch(error => console.error('Error:', error));
+        }
+    </script>
+</body>
+</html>

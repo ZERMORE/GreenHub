@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <input>
+        <net-file value="D:/project_files/WuHanLanes/webUI/wuhandata/map2.net.xml"/>
+        <route-files value="flow.rou.xml"/>
+        <additional-files value="D:/project_files/WuHanLanes/webUI/wuhandata/nsdet.add.xml"/>
+    </input>
+    <time>
+        <begin value="0"/>
+        <end value="10000"/>
+        <step-length value="1"/>
+    </time>
+</configuration>

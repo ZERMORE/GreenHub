@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 03/23/24 21:24:10 by Eclipse SUMO GUI Version 1.6.0
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+
+    <input>
+        <net-file value="D:\Download\PDQN-VSLto_wuhan\PDQN-VSLthreelanetowuhan\PDQN-VSL\WUHAN\map2.net.xml"/>
+        <route-files value="D:\Download\PDQN-VSLto_wuhan\PDQN-VSLthreelanetowuhan\PDQN-VSL\WUHAN\345.rou.xml"/>
+        <additional-files value="D:\Download\PDQN-VSLto_wuhan\PDQN-VSLthreelanetowuhan\PDQN-VSL\WUHAN\nsdet.add.xml"/>
+    </input>
+
+    <time>
+        <begin value="0"/>
+        <end value="10000"/>
+        <step-length value="1"/>
+    </time>
+
+    <gui_only>
+        <tracker-interval value="1"/>
+    </gui_only>
+
+</configuration>
+-->
+
+<detector xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/det_e1_file.xsd">
+</detector>

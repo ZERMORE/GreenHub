@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<routes>
+    <vType id="ACCType" color="22,255,255" length="5.0" carFollowModel="IDM" laneChangeModel="LC2013" lcSpeedGain="1"/>
+    <vType id="CACCType" color="22,55,255" length="5.0" carFollowModel="IDM" laneChangeModel="LC2013" lcSpeedGain="1"/>
+    <vType id="standard_car" color="255,225,0" length="5.0" maxSpeed="22.2" carFollowModel="IDM" laneChangeModel="LC2013" speedFactor="normc(1,0.1,0.2,2)" lcSpeedGain="1"/>
+    <route id="0" edges="R1 R2 R3 R4 R5"/>
+    <route id="1" edges="R1 R2 R3 R4 RL3"/>
+    <route id="2" edges="L1 RL1 RL2 R3 R4 R5"/>
+    <!-- Vehicles, persons and containers (sorted by depart) -->
+    <flow id="f_3" begin="1.00" departLane="free" departPos="free" departSpeed="speedLimit" route="0" end="7200.00" vehsPerHour="2000.00"/>
+    <flow id="f_1" begin="1.00" departLane="free" departPos="free" departSpeed="speedLimit" route="1" end="7200.00" vehsPerHour="800.00"/>
+    <flow id="f_2" begin="1" departLane="free" departPos="free" departSpeed="speedLimit" route="2" end="7200.00" vehsPerHour="5000.00"/>
+</routes>
