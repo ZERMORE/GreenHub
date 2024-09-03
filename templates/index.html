@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>车流量模型</title>
+</head>
+<body>
+    <h1>输入车流量信息</h1>
+    <form id="trafficForm">
+        <label for="lane1">车道1流量:</label>
+        <input type="number" id="lane1" name="lane1" step="10"><br><br>
+        <label for="lane2">车道2流量:</label>
+        <input type="number" id="lane2" name="lane2" step="10"><br><br>
+        <label for="lane3">车道3流量:</label>
+        <input type="number" id="lane3" name="lane3" step="10"><br><br>
+        <button type="button" onclick="runModel()">运行模型</button>
+    </form>
+
+    <h2>模型输出结果</h2>
+    <pre id="modelOutput"></pre>
+
+    <script src="static/script.js"></script>
+</body>
+</html>

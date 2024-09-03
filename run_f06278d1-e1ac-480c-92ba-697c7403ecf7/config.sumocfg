@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <input>
+        <net-file value="D:\项目文件\人工智能创意赛\webUI\wuhandata\map2.net.xml"/>
+        <route-files value="run_f06278d1-e1ac-480c-92ba-697c7403ecf7\flow.rou.xml"/>
+        <additional-files value="D:\项目文件\人工智能创意赛\webUI\wuhandata\nsdet.add.xml"/>
+    </input>
+    <time>
+        <begin value="0"/>
+        <end value="10000"/>
+        <step-length value="1"/>
+    </time>
+</configuration>
